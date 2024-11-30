@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM,</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fruits-container li{
+            color: tomato;
+        }
+        li{
+            color: teal;
+        }
+        #fruits-title{
+            color: red;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>welcome to my dom</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos optio eaque deserunt non culpa repellendus fuga voluptates, nemo minus placeat illo ducimus. Excepturi, eaque voluptatibus vero deleniti exercitationem minima recusandae.</p>
+    </header>
+    <main>
+        <section>
+            <h1>my awesome dom de baba</h1>
+        <ul>
+            <li>jalali set</li>
+            <li>shafayet</li>
+            <li>bonobash</li>
+            <li>dom de re baba</li>
+        </ul>
+        </section>
+        
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class randome-class">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="places-title">places I like to visit</h1>
+            <ul>
+                <li class="important-places">sundorban</li>
+                <li class="important-places">bandarban</li>
+                <li class="important-places">kataban</li>
+                <li class="others-places">shalban</li>
+            </ul>
+        </section>
+        
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="dom.js"></script>
+    <script>
+        const student = {
+            name: 'Abul',
+            ID : 11,
+            study: function(time){
+                console.log(time, 'study kortese')
+            }
+        }
+
+    console.log('--------------------------')
+
+        const liCollection = document.getElementsByTagName('li');
+        //console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+
+    console.log('--------------------------')
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            console.log(h1.innerText);
+        }
+
+    console.log('--------------------------')
+
+        const colorAqua = document.getElementById('fruits-title');
+        colorAqua.style.color = 'aqua';
+        colorAqua.style.backgroundColor = 'red';
+        colorAqua.style.padding = '10px';
+        colorAqua.style.textAlign = 'center';
+        colorAqua.style.borderRadius = '10px';
+        colorAqua.style.border = '2px solid blue';
+        colorAqua.style.fontSize ='50px';
+
+    console.log('--------------------------')
+
+        const title = document.getElementById('fruits-title');
+        title.getAttribute('class')
+        console.log(title);
+        title.setAttribute('title', 'tooltip set by Javascript')
+
+
+        title.classList.add('class-title')
+        title.classList.remove('some-class')
+
+    console.log('--------------------------')
+
+        console.log(document.getElementsByClassName('fruits-container')) 
+        console.log(document.getElementsByClassName('fruits-container')[0].innerHTML) 
+        console.log(document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2>ABC wow DOM is changing</h2>') 
+        console.log(document.getElementsByClassName('fruits-container')[0].innerText) 
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
