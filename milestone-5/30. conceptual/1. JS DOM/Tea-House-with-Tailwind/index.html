@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea-House with tailwind</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!--  ion-icons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+ 
+    <STYle>
+         body{
+            font-family: "Manrope", sans-serif;
+         }
+    </STYle>
+</head>
+
+<body>
+   <main class="max-w-screen-xl mx-auto px-10 lg:px-20">
+      <header class="md:flex justify-between items-center pt-10 mb-20">
+        <!--text content -->
+         <div>
+            <h1 class="text-4xl md:text-6xl font-bold">
+              It's good <br>
+              tea time at The <br>
+               Tea House
+              </h1>
+              <p class="text-gray-500 mt-6 mb-6">
+                Tea and Botanical Solutions Supplier Give Optimum <br> Satisfaction To Your Taste Buds.
+              </p>
+              <button class=" bg-gradient-to-r from-orange-500 to-red-500 px-5 py-3 rounded-lg text-white font-medium"><a href="">Explore More</a><ion-icon class="-rotate-45" name="arrow-forward-outline"></ion-icon></button>
+         </div>
+         <!--img content-->
+         <div>
+          <div class="relative">
+            <img class="w-full img" src="images/banner.png" alt="">
+            <div class="flex items-center bg-slate-200 px-5 py-3 rounded-lg absolute top-3/4 right-80">
+              <div class="text-yellow-500 mr-3 text-4xl">
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <div>
+                <h1 class="text-4xl font-bold">5.00</h1>
+                <p class="text-gray-500">Trust Pilot Ratings</p>
+              </div>
+            </div>
+          </div>
+         </div>
+
+      </header>
+
+   </main>
+
+
+
+
+     <script src="tailwind.config.js"></script>
+     <script src="js/tea-house.js"></script>
+</body>
+</html>
